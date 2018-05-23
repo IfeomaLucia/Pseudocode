@@ -1,0 +1,33 @@
+interface wood{
+    void processed();
+    void catchFire();
+}
+
+abstract class furniture implements wood{
+   void processed(){
+        prints = "This is gotten from a tree";
+    }
+    void catchFire(){
+        prints = "It is flammable";
+    }
+}
+
+class decorate(){
+    public paint(){
+        prints = "It is painted to protect it from the environment";
+    }
+
+class Table extends furniture(decorate){
+    this.decorate = decorate;
+    
+    public buildTable(){
+    this.decorate.paint;
+    this.processed;
+    }
+}
+
+static void Main(string[] args){
+decorate myDecoration = new decorate();
+Table myTable = new Table(myDecoration);
+myTable.buildTable();
+																				
