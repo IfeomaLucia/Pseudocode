@@ -1,8 +1,10 @@
+//creating an interface class and declaring the methods involved in the clas
 interface wood{
     void processed();
     void catchFire();
 }
 
+//creating an abstract class and implementing the wood interface class
 abstract class furniture implements wood{
    void processed(){
         prints = "This is gotten from a tree";
@@ -12,11 +14,13 @@ abstract class furniture implements wood{
     }
 }
 
+//creating a concrete class
 class decorate(){
     public paint(){
         prints = "It is painted to protect it from the environment";
     }
 
+//creating a concrete class Tabe that has the properties of the abstract class furniture and consists of a constructor buildTable
 class Table extends furniture(decorate){
     this.decorate = decorate;
     
@@ -26,6 +30,7 @@ class Table extends furniture(decorate){
     }
 }
 
+//calling all of the classes in the Main class
 static void Main(string[] args){
 decorate myDecoration = new decorate();
 Table myTable = new Table(myDecoration);
